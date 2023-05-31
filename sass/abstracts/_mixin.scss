@@ -1,0 +1,79 @@
+@use "./variables" as var;
+// FOR PARAGRAPHS AND SMALL CONTENTS
+@mixin paragraph($paragraph) {
+  $font-sizes: (
+    p1: 18px,
+    p2: 16px,
+    p3: 14px,
+  );
+  $line-heights: (
+    p1: 28px,
+    p2: 24px,
+    p3: 20px,
+  );
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: var.$grey;
+}
+// FOR HEADINGS AND LABELS
+@mixin heading($heading) {
+  $font-sizes: (
+    h1: 56px,
+    h2: 48px,
+    h3: 36px,
+    h4: 24px,
+    h5: 16px,
+    label: 14px,
+  );
+  $line-heights: (
+    h1: 68px,
+    h2: 58px,
+    h3: 54px,
+    h4: 36px,
+    h5: 28px,
+    label: 20px,
+  );
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: var.$dark-blue;
+}
+// FOR BUTTONS
+@mixin button($padding-y, $padding-x, $font-sizes) {
+  display: inline-block;
+  padding: $padding-y, $padding-x;
+  background-color: var.$light-blue;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+// GLOBAL MEDIA
+@mixin media($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+// FOR MOBILE MEDIA
+@mixin first-mobile($px) {
+  @media (min-width: $px) {
+    @content;
+  }
+}
+// FOR D-FLEX
+@mixin flexbox($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+// FOR D-GRID
+@mixin grid($cols, $rows, $gap) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  grid-template-rows: repeat($rows, 1fr);
+  grid-gap: $gap;
+}
