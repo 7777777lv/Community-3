@@ -25,12 +25,18 @@ body {
 }
 
 #main__btn {
-  padding: 22px 32px;
+  display: inline-block;
+  padding: 22px, 32px;
   background-color: #444cfc;
-  font-weight: 500;
+  color: white;
   font-size: 16px;
+  font-weight: 600;
   line-height: 24px;
-  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+  padding: 22px 32px;
   max-width: 215px;
   display: flex;
   align-items: center;

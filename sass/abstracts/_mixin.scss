@@ -1,57 +1,9 @@
 @use "./variables" as var;
-// FOR PARAGRAPHS AND SMALL CONTENTS
-@mixin paragraph($paragraph) {
-  $font-sizes: (
-    p1: 18px,
-    p2: 16px,
-    p3: 14px,
-  );
-  $line-heights: (
-    p1: 28px,
-    p2: 24px,
-    p3: 20px,
-  );
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  color: var.$grey;
-
-  &__#{$paragraph} {
-    font-size: map-get($font-sizes, $paragraph);
-    line-height: map-get($line-heights, $paragraph);
-  }
-}
-// FOR HEADINGS AND LABELS
-@mixin heading($heading) {
-  $font-sizes: (
-    h1: 56px,
-    h2: 48px,
-    h3: 36px,
-    h4: 24px,
-    h5: 16px,
-    label: 14px,
-  );
-  $line-heights: (
-    h1: 68px,
-    h2: 58px,
-    h3: 54px,
-    h4: 36px,
-    h5: 28px,
-    label: 20px,
-  );
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  color: var.$dark-blue;
-
-  &.#{$heading} {
-    font-size: map-get($font-sizes, $heading);
-    line-height: map-get($line-heights, $heading);
-  }
-}
 // FOR BUTTONS
 @mixin button($padding-y, $padding-x) {
   display: inline-block;
   padding: $padding-y, $padding-x;
-  background-color: var.$light-blue;
+  background-color: $light-blue;
   color: white;
   font-size: 16px;
   font-weight: 600;
