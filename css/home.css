@@ -23,3 +23,108 @@ body {
   padding: 0 20px !important;
   margin: 0 auto !important;
 }
+
+#main__btn {
+  padding: 22px 32px;
+  background-color: #444cfc;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  max-width: 215px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+#main__btn .shape1 {
+  position: absolute;
+  height: 19px;
+  width: 19px;
+  background-color: #ffa155;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.6s;
+}
+#main__btn .shape2 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #ffd3af;
+  top: 0;
+  left: 7px;
+  opacity: 0;
+  transition: 0.4s;
+}
+#main__btn .shape3 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #666dff;
+  top: 0;
+  left: 19px;
+  opacity: 0;
+  transition: 0.7s;
+}
+#main__btn .shape4 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #666dff;
+  left: 0;
+  top: 19px;
+  opacity: 0;
+  transition: 0.8s;
+}
+#main__btn img {
+  transition: 0.3s;
+}
+#main__btn:hover {
+  background-color: #000dff;
+}
+#main__btn:hover img {
+  transform: translateX(6px);
+}
+#main__btn:hover .shape1,
+#main__btn:hover .shape2,
+#main__btn:hover .shape3,
+#main__btn:hover .shape4 {
+  opacity: 1;
+}
+@media only screen and (max-width: 700px) {
+  #main__btn {
+    padding: 18px 20px;
+    max-width: 200px;
+  }
+  #main__btn .shape1 {
+    width: 16px;
+    height: 16px;
+  }
+  #main__btn .shape2 {
+    width: 10px;
+    height: 10px;
+    left: 6px;
+  }
+  #main__btn .shape3 {
+    width: 10px;
+    height: 10px;
+    left: 16px;
+  }
+  #main__btn .shape4 {
+    top: 16px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #main__btn {
+    margin: 0 !important;
+    font-size: 12px;
+    max-width: 170px;
+    gap: 6px;
+    padding: 15px;
+  }
+  #main__btn img {
+    width: 18px;
+  }
+}
