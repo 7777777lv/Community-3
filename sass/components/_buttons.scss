@@ -64,7 +64,7 @@
       opacity: 1;
     }
   }
-  @include media(700px) {
+  @include media(800px) {
     padding: 18px 20px;
     max-width: 200px;
     .shape1 {
@@ -87,7 +87,7 @@
   }
   @include media(550px) {
     margin: 0 !important;
-    font-size: 12px;
+    font-size: 14px;
     max-width: 170px;
     gap: 6px;
     padding: 15px;
