@@ -1,1 +1,13 @@
-@use '../abstracts/variables' as var;
+@use "../abstracts/variables" as var;
+
+@include first-mobile(960px) {
+}
+
+@include flexbox(row, space-between, center) {
+    gap: 30px;
+}
+
+h1 {
+    @extend %heading2;
+    color: var.$darkblue;
+}
